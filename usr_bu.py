@@ -12,8 +12,12 @@ computer_name = platform.node()
 
 if computer_name.endswith('.local'):
     computer_name = computer_name.split('.')[0]
+elif computer_name.endswith('.wk.com'):
+    computer_name = computer_name.split('.')[0]
 else:
     pass
+
+computer_name = computer_name.lower()
 
 osx_tar_path = '/usr/bin/tar'
 linux_tar_path = '/bin/tar'
